@@ -1,15 +1,7 @@
 import React from "react";
-import {
-  // Platform,
-  StyleSheet,
-  Text,
-  View
-} from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import nodejs from "nodejs-mobile-react-native";
-// import RNFS from "react-native-fs";
-
-// const DOCUMENT_DIRECTORY =
-//   Platform.OS === "ios" ? RNFS.MainBundlePath : RNFS.DocumentDirectoryPath;
+import RNFS from "react-native-fs";
 
 export default class App extends React.Component {
   componentDidMount() {
@@ -18,26 +10,19 @@ export default class App extends React.Component {
 
   test = () => {
     nodejs.start("main.js");
+    nodejs.channel.send(
+      JSON.stringify({
+        action: "init",
+        data: { docsPath: RNFS.DocumentDirectoryPath }
+      })
+    );
     nodejs.channel.addListener("message", msg => {
-      alert("Message: " + msg);
+      const payload = JSON.parse(msg);
+      if (payload.action === "message") {
+        alert("Message: " + payload.data.message);
+      }
     });
   };
-
-  // test = () => {
-  //   nodejs.start("main.js");
-  //   nodejs.channel.send(
-  //     JSON.stringify({
-  //       action: "init",
-  //       data: { docsPath: DOCUMENT_DIRECTORY }
-  //     })
-  //   );
-  //   nodejs.channel.addListener("message", msg => {
-  //     const payload = JSON.parse(msg);
-  //     if (payload.action === "message") {
-  //       alert("Message: " + payload.data.message);
-  //     }
-  //   });
-  // };
 
   render() {
     return (
