@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "start": "react-native start",
+    "install:nodejs-mobile": "cd nodejs-assets/nodejs-project && npm ci",
+    "clean:cache": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean --force && npm cache verify",
+    "start": "react-native start --reset-cache",
     "android": "react-native run-android",
     "ios": "react-native run-ios"
   },
