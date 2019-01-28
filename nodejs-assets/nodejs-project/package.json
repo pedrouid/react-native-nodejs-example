@@ -1,0 +1,8 @@
+{
+  "name": "node-project",
+  "version": "0.0.1",
+  "description": "NodeJS Project",
+  "main": "main.js",
+  "author": "pedrouid",
+  "license": "MIT"
+}
