@@ -4,5 +4,8 @@
   "description": "NodeJS Project",
   "main": "main.js",
   "author": "pedrouid",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "ipfs": "^0.31.2"
+  }
 }
