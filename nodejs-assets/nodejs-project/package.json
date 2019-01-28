@@ -5,7 +5,13 @@
   "main": "main.js",
   "author": "pedrouid",
   "license": "MIT",
+  "scripts": {
+    "install": "patch-package"
+  },
   "dependencies": {
     "ipfs": "^0.31.2"
+  },
+  "devDependencies": {
+    "patch-package": "^5.1.1"
   }
 }
