@@ -1,4 +1,9 @@
 {
+  "name": "react-native-nodejs-example",
+  "description": "Testing nodejs-mobile-react-native with ipfs",
+  "author": "Pedro Gomes <https://github.com/pedrouid>",
+  "private": true,
+  "license": "MIT",
   "scripts": {
     "bootstrap": "npm install && npm run install:nodejs-mobile",
     "install:nodejs-mobile": "cd nodejs-assets/nodejs-project && npm ci",
@@ -13,6 +18,5 @@
     "react": "16.5.0",
     "react-native": "~0.55.2",
     "react-native-fs": "^2.13.3"
-  },
-  "private": true
+  }
 }
