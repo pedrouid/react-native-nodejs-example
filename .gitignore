@@ -68,6 +68,7 @@ buck-out/
 
 # NodeJS Assets
 #
+bundle.js
 sample-main.js
 sample-package.json
 build-native-modules-MacOS-helper-script-node.sh

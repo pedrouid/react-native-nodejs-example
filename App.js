@@ -9,7 +9,7 @@ export default class App extends React.Component {
   }
 
   test = () => {
-    nodejs.start("main.js");
+    nodejs.start("bundle.js");
     nodejs.channel.send(
       JSON.stringify({
         action: "init",
