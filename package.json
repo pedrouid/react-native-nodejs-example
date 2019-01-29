@@ -9,7 +9,7 @@
     "ios": "react-native run-ios"
   },
   "dependencies": {
-    "nodejs-mobile-react-native": "^0.2.1",
+    "nodejs-mobile-react-native": "^0.3.2",
     "react": "16.5.0",
     "react-native": "~0.55.2",
     "react-native-fs": "^2.13.3"
