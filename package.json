@@ -14,8 +14,5 @@
     "react-native": "~0.55.2",
     "react-native-fs": "^2.13.3"
   },
-  "devDependencies": {
-    "babel-preset-react-native-stage-0": "^1.0.1"
-  },
   "private": true
 }
