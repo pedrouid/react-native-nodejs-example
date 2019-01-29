@@ -2,6 +2,7 @@
   "scripts": {
     "bootstrap": "npm install && npm run install:nodejs-mobile",
     "install:nodejs-mobile": "cd nodejs-assets/nodejs-project && npm ci",
+    "clean": "rm -rf node_modules nodejs-assets/nodejs-project/node_modules",
     "clean:cache": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean --force && npm cache verify",
     "start": "npm run clean:cache && react-native start --reset-cache",
     "android": "react-native run-android",

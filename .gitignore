@@ -66,3 +66,6 @@ buck-out/
 #
 *.jsbundle
 
+
+build-native-modules-MacOS-helper-script-node.sh
+build-native-modules-MacOS-helper-script-npm.sh
