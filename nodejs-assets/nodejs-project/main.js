@@ -3,32 +3,62 @@ const IPFS = require("ipfs");
 
 let ipfs = null;
 
-function sendState(state) {
-  RNBridge.channel.send(
-    JSON.stringify({
-      action: "ipfs:state",
-      data: state
-    })
-  );
-}
+// function sendState(state) {
+//   RNBridge.channel.send(
+//     JSON.stringify({
+//       action: "ipfs:state",
+//       data: state
+//     })
+//   );
+// }
 
 function initIpfs(docsPath) {
+  // const ipfsConfig = {
+  //   init: {
+  //     bits: 1024,
+  //     emptyRepo: true,
+  //     log: sendState
+  //   },
+  //   repo: docsPath,
+  //   EXPERIMENTAL: {
+  //     dht: false,
+  //     relay: {
+  //       enabled: true,
+  //       hop: {
+  //         enabled: false,
+  //         active: false
+  //       }
+  //     },
+  //     pubsub: true
+  //   },
+  //   config: {
+  //     Bootstrap: [],
+  //     Addresses: {
+  //       Swarm: ["/ip4/159.203.117.254/tcp/9090/ws/p2p-websocket-star"]
+  //     }
+  //   },
+  //   connectionManager: {
+  //     maxPeers: 10,
+  //     minPeers: 2,
+  //     pollInterval: 20000
+  //   }
+  // };
+
   const ipfsConfig = {
     init: {
       bits: 1024,
-      emptyRepo: true,
-      log: sendState
+      emptyRepo: true
     },
     repo: docsPath,
     EXPERIMENTAL: {
+      // relay: {
+      //   enabled: true,
+      //   hop: {
+      //     enabled: false,
+      //     active: false
+      //   }
+      // },
       dht: false,
-      relay: {
-        enabled: true,
-        hop: {
-          enabled: false,
-          active: false
-        }
-      },
       pubsub: true
     },
     config: {
