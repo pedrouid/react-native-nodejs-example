@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "bootstrap": "npm install && npm run install:nodejs-mobile",
+    "build:nodejs-mobile": "cd nodejs-assets/nodejs-project && npm run build",
     "install:nodejs-mobile": "cd nodejs-assets/nodejs-project && npm ci",
     "clean": "rm -rf node_modules nodejs-assets/nodejs-project/node_modules",
     "clean:cache": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean --force && npm cache verify",
